@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
+using Avalonia.Threading;
 using BedrockBoot.Dependence;
+using BedrockBoot.Interface;
 using BedrockBoot.Models.Global;
 using BedrockBoot.Models.Helper;
 using OnePointUI.Avalonia.Base.Entry;
@@ -9,6 +11,7 @@ using Plugin.Pro.Base.Entry;
 using Plugin.Pro.Models.Unlock;
 using Plugin.Pro.Views.DialogContent;
 using Plugin.Pro.Views;
+using Plugin.Pro.Views.Page;
 using Round.SDK.Entry.BedrockBoot;
 using Round.SDK.Helper;
 using Round.SDK.Plugin.BedrockBoot;
@@ -45,6 +48,17 @@ public class Load : IPluginBedrockBoot
                     }
                 });
             })
+        });
+
+        Dispatcher.UIThread.Invoke(() =>
+        {
+            RegisterService.RegisterSettingPage(new SettingPageInfo()
+            {
+                Header = "关于增强版",
+                Description = "关于插件 [BedrockBoot 增强版]",
+                Page = new AboutPro(),
+                IconSource = "\uE946"
+            });
         });
         
         RegisterService.RegisterLaunchingEvent(path =>

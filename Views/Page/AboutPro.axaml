@@ -1,0 +1,45 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:onePointControls="clr-namespace:OnePointUI.Avalonia.Styling.Controls.OnePointControls;assembly=OnePointUI.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Plugin.Pro.Views.Page.AboutPro">
+    <ScrollViewer>
+        <StackPanel Margin="15">
+            <Grid>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image Source="avares://Plugin.Pro/Assets/Icon/Pro.png"
+                           Width="64"
+                           Height="64"
+                           HorizontalAlignment="Left" />
+
+                    <StackPanel Spacing="4"
+                                VerticalAlignment="Center">
+                        <onePointControls:LineTextBlock Text="BedrockBoot Pro"
+                                                        Margin="12,0,0,0" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock Margin="5,0,0,8"
+                       FontSize="16"
+                       Text="{DynamicResource About.Section.OpenSource}" />
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="20,1">
+                <TextBlock Text="{DynamicResource About.OpenSource.Repo}" />
+                <HyperlinkButton Content="BedrockBoot.Pro 开源仓库"
+                                 NavigateUri="https://github.com/MinecraftYJQ/BedrockBoot.Pro"></HyperlinkButton>
+            </StackPanel>
+
+            <TextBlock Margin="5,20,0,8"
+                       FontSize="16"
+                       Text="{DynamicResource About.Section.Components}" />
+
+            <TextBlock Margin="20,1" Text="BedrockBoot 使用了来自 superturtlee 提供的 MCPatcher 进行游戏解锁" />
+            <TextBlock Margin="20,1" Text="(https://github.com/superturtlee/MCPatcher)" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

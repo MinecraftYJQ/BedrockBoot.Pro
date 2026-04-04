@@ -17,4 +17,9 @@
       <EmbeddedResource Include="Assets\Dependence\GamePatch.zip" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Assets\Icon\Pro.png" />
+      <AvaloniaResource Include="Assets\Icon\Pro.png" />
+    </ItemGroup>
+
 </Project>
