@@ -1,4 +1,5 @@
-﻿using BedrockBoot.Models.Global;
+﻿using BedrockBoot.Core.Models.Helper;
+using BedrockBoot.Models.Global;
 using BedrockBoot.Models.Helper;
 using BedrockLauncher.Core;
 using Plugin.Pro.Base.Entry;

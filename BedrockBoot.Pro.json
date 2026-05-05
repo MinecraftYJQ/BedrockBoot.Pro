@@ -1,0 +1,14 @@
+{
+  "packName": "BedrockBoot Pro",
+  "packIconPath": "",
+  "packVersion": "1.0.0",
+  "packAuthor": "MinecraftYJQ",
+  "packDescription": "BedrockBoot 增强型插件，包括游戏解锁。",
+  "packLicense": "",
+  "packLicenseUrl": "",
+  "packScreenshots": [
+  ],
+  "buildProjectFilePath": "./src/BedrockBoot.Pro/Plugin.Pro.csproj",
+  "buildOutputPath": "./publish",
+  "bodyFile": "Plugin.Pro.dll"
+}
